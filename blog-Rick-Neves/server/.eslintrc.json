@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "@rocketseat/eslint-config/node"
+  ],
+  "rules": {
+    "no-useless-constructor": "off",
+    "import/order": [
+      0,
+      {
+        "newlines-between": "always",
+        "groups": [
+          "internal",
+          "external",
+          "builtin",
+          "unknown",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "unknown"
+          }
+        ]
+      }
+    ]
+  }
+}
